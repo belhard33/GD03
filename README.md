@@ -7,17 +7,17 @@ Shipra led the charge in finding out how we should each connect to Twitter's API
 From our data file collected over several days, we wanted to:
 
 (Tasmiya)
-Count the number of tweets
-Calculate the average word length
-Count the # of words in a tweet text
+//Count the number of tweets
+//Calculate the average word length
+//Count the # of words in a tweet text
 
 (Tianyi)
-Look at @ mentions
+//Look at @ mentions
 
 (Brittney)
-Count the # of hashtags used
-Count the # of unique hashtags
-Highlight the most frequently used hashtags
+//Count the # of hashtags used
+//Count the # of unique hashtags
+//Highlight the most frequently used hashtags
 
 (Sowjanya)
 
