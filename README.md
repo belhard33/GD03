@@ -6,6 +6,11 @@ Shipra led the charge in finding out how we should each connect to Twitter's API
 
 From our data file collected over several days, we wanted to:
 
+(Shipra)
+// Connect IntelliJ with twitter Api using Twitter4j
+// Fetch live "Games" data from titter
+// Also, gathered historical data of "Tokyo Olympics" for data analysis
+
 (Tasmiya)
 //Count the number of tweets
 //Calculate the average word length
