@@ -18,7 +18,10 @@ From our data file collected over several days, we wanted to:
 //Count the # of words in a tweet text
 
 (Tianyi)
-//Look at @ mentions
+//Count the total mentions
+//Count the number of users meentioned
+//Count the number of unique mentions
+//Find out who is the top1
 
 (Brittney)
 //Count the # of hashtags used
