@@ -47,9 +47,7 @@ public class GD03 {
 
 // COUNT NUMBER OF TWEETS
         StdOut.println("> Number of tweets in file = " + tweetList.size());
-
 // CREATE ARRAYLIST OF ALL @mentions
-
         Pattern pattern = Pattern.compile("\\@\\w+"); // compiles regex expression
         Matcher matcher = pattern.matcher(input); // finds regex matches in file
         ArrayList<String> mentionsList = new ArrayList<>();
@@ -58,7 +56,6 @@ public class GD03 {
             mentionsList.add(matcher.group());
         }
         StdOut.println("> Number of users mentioned in tweets = " + mentionsList.size());
-
 // CREATE TST OF MENTIONS
         TST<Integer> mentions = new TST<>();
         for (int i = 0; i < mentionsList.size(); i++) {
@@ -146,7 +143,6 @@ public class GD03 {
             }
         }
 
-
 // PRINT UNIQUE HASHTAGS
         System.out.print("> Sample hashtags = ");
         for (int i = 0; i < 5; i++) {
@@ -157,21 +153,22 @@ public class GD03 {
 // PRINT MOST USED HASHTAG + NUMBER OF TIMES
         StdOut.println("> Most frequently used hashtag: " + mostUsedHash + " used " + timesUsedHash + " times");
 
+// NUMBER OF LOCATIONS USED
         Pattern pattern5 = Pattern.compile("(Location:)(.+)(,)");
         Matcher matcher5 = pattern5.matcher(input);
         ArrayList<String> tweetLocation = new ArrayList<>();
         while (matcher5.find()) {
             tweetLocation.add(matcher5.group());
         }
-
         tweetLocation.removeIf(s -> s.equals(" "));
         StdOut.println("> Number of locations used = " + tweetLocation.size());
-        System.out.print("> Sample tweet locations = ");
+        //System.out.print("> Sample tweet locations = ");
         for (int i = 0; i < 5; i++) {
             System.out.print(tweetLocation.get(i) + " | ");
         }
         System.out.println();
 
+// TST FOR UNIQUE LOCATIONS USED
         TST<Integer> locations = new TST<>();
         for (int i = 0; i < tweetLocation.size(); i++) {
             String key = tweetLocation.get(i);
@@ -183,6 +180,7 @@ public class GD03 {
             }
         }
 
+// NUMBER OF UNIQUE LOCATIONS USED
         StdOut.println("> Number of unique locations used = " + locations.size());
         String mostUsedLocation = "";
         Integer timesUsedLocation = 0;
@@ -195,6 +193,7 @@ public class GD03 {
 
         StdOut.println("> Most frequently tweeted from location: " + mostUsedLocation + " done " + timesUsedLocation + " times");
 
+// PATTERN MATCHING FOR INPUT STRING
         Pattern pattern6 = Pattern.compile("(/Houston|Pheonix|Philadelphia|San Antonio|San Diego|Dallas|San Jose|Austin|Jacksonville|Fort Worth|" +
                 "Columbus|Indianapolis|Charlotte|San Francisco|Seattle|Denver|Long Beach|Mesa|Kansas City|Sacramento|" +
                 "Washington, DC|Nashville-Davidson|Oklahoma City|El Paso|Boston|Portland|Las Vegas|Detroit|Memphis|Baltimore|" +
